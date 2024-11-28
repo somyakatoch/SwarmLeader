@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" xmlns="http://www.ros.org/wiki/urdf">
+
+  <!-- Base Robot Definition -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.2" length="0.5"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.2" length="0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Add wheels or other components here as needed -->
+
+  <joint name="base_to_wheel_left" type="revolute">
+    <parent link="base_link"/>
+    <child link="wheel_left"/>
+    <origin xyz="0.2 0.1 0.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="10.0" velocity="10.0" lower="-1.0" upper="1.0"/>
+  </joint>
+
+  <!-- Additional links and joints can be added for sensors, actuators, etc. -->
+</robot>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xacro:include filename="$(find leader_follower_swarm)/description/swarm_core.xacro"/>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Follower-specific sensors or modifications -->
+  <link name="follower_sensor_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+
+  <!-- Additional joints for follower sensors -->
+  <joint name="follower_sensor_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="follower_sensor_link"/>
+    <origin xyz="0.2 -0.2 0.2"/>
+  </joint>
+
+</robot>
