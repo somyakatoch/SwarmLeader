@@ -1,0 +1,11 @@
+# nav2_params_leader.yaml
+robot_params:
+  robot_radius: 0.2
+  max_vel_x: 0.5
+  max_vel_theta: 1.0
+  min_vel_x: 0.1
+  min_vel_theta: 0.5
+
+planner_params:
+  max_planner_iterations: 500
+  max_goal_distance: 1.0

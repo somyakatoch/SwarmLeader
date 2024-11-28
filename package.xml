@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>leader_follower_swarm</name>
+  <version>0.0.1</version>
+  <description>Leader-follower swarm navigation for ROS 2</description>
+  <maintainer email="robotics.iitrpr.ac.in">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav2_common</exec_depend>
+  <exec_depend>nav2_demos</exec_depend>
+</package>
